@@ -72,7 +72,7 @@
 - summary: |
     Проверка сообщения о проигрыше в игре с ботом по окончанию времени 
   requirement: |
-    По окончанию времени в игре с ботом на сайте выводится модальное окно, содерщащее сообщение "If you read this you've lost the game". В правой части экрана выводится сообщение "Your opponent has won the game"
+    По окончанию времени в игре с ботом на сайте выводится модальное окно, содержащее сообщение "If you read this you've lost the game". В правой части экрана выводится сообщение "Your opponent has won the game"
   prerequisites:
     Открыта страница с запущенной игрой на https://codebattle.hexlet.io/
   test-data: |
@@ -83,3 +83,122 @@
   expected-result: |
     Пользователь должен получить сообщение "If you read this you've lost the game"
 
+- summary: |
+    Проверка изменения имени пользователя 
+  requirement: |
+    После изменения имени и нажатии кнопки "Save" должно отобразиться сообщение "Your settings has been changed", и значение имени должно обновится
+  prerequisites:
+    Открыта страница https://codebattle.hexlet.io/#lobby
+  test-data: |
+    Пользователь авторизован
+  steps:
+    - Нажать на имя или иконку пользователя 
+    - Выбрать "Setting"
+    - Заполнить поле  "Your name" уникальным значеним, содержащим более 3 символов 
+    - Нажать "Save"
+  expected-result: |
+    Пользователь должен получить сообщение "Your settings has been changed"
+    В правом верхнем углу должно отображаться новое имя.
+    
+- summary: |
+    Проверка изменения имени пользователя 
+  requirement: |
+    После изменения имени и нажатии кнопки "Save" должно отобразиться сообщение "Your settings has been changed", и значение имени должно обновится
+  prerequisites:
+    Открыта страница https://codebattle.hexlet.io/#lobby
+  test-data: |
+    Пользователь авторизован
+  steps:
+    - Нажать на имя или иконку пользователя 
+    - Выбрать "Setting"
+    - Заполнить поле  "Your name" уникальным значеним, содержащим более 3 символов 
+    - Нажать "Save"
+  expected-result: |
+    Пользователь должен получить сообщение "Your settings has been changed"
+    В правом верхнем углу должно отображаться новое имя.
+
+- summary: |
+    Проверка установки типа звука уведомления "Dendy"
+  requirement: |
+    После выбора звука уведомления "Dendy" и нажатии кнопки "Save" должно отобразиться сообщение "Your settings has been changed", и тип звука в уведомлениях должен соответствовать выбранному
+  prerequisites:
+    Открыта страница https://codebattle.hexlet.io/#lobby
+  test-data: |
+    Пользователь авторизован
+  steps:
+    - Нажать на имя или иконку пользователя 
+    - Выбрать "Setting"
+    - Для параметра "Select sound type" установить флажок перед значением "Dendy"
+    - Нажать "Save"
+  expected-result: |
+    Пользователь должен получить сообщение "Your settings has been changed"
+    Тип звука в уведомлениях должен соответствовать "Dendy"
+
+- summary: |
+    Проверка установки типа звука уведомления "CS"
+  requirement: |
+    После выбора звука уведомления "CS" и нажатии кнопки "Save" должно отобразиться сообщение "Your settings has been changed", и тип звука в уведомлениях должен соответствовать выбранному
+  prerequisites:
+    Открыта страница https://codebattle.hexlet.io/#lobby
+  test-data: |
+    Пользователь авторизован
+  steps:
+    - Нажать на имя или иконку пользователя 
+    - Выбрать "Setting"
+    - Для параметра "Select sound type" установить флажок перед значением "CS"
+    - Нажать "Save"
+  expected-result: |
+    Пользователь должен получить сообщение "Your settings has been changed"
+    Тип звука в уведомлениях должен соответствовать "CS"
+
+- summary: |
+    Проверка установки типа звука уведомления "Standart"
+  requirement: |
+    После выбора звука уведомления "Standart" и нажатии кнопки "Save" должно отобразиться сообщение "Your settings has been changed", и тип звука в уведомлениях должен соответствовать выбранному
+  prerequisites:
+    Открыта страница https://codebattle.hexlet.io/#lobby
+  test-data: |
+    Пользователь авторизован
+  steps:
+    - Нажать на имя или иконку пользователя 
+    - Выбрать "Setting"
+    - Для параметра "Select sound type" установить флажок перед значением "Standart"
+    - Нажать "Save"
+  expected-result: |
+    Пользователь должен получить сообщение "Your settings has been changed"
+    Тип звука в уведомлениях должен соответствовать "Standart"
+
+- summary: |
+    Проверка установки беззвучного уведомления
+  requirement: |
+    После выбора звука уведомления "Silent" и нажатии кнопки "Save" должно отобразиться сообщение "Your settings has been changed", и тип звука в уведомлениях должен соответствовать выбранному
+  prerequisites:
+    Открыта страница https://codebattle.hexlet.io/#lobby
+  test-data: |
+    Пользователь авторизован
+  steps:
+    - Нажать на имя или иконку пользователя 
+    - Выбрать "Setting"
+    - Для параметра "Select sound type" установить флажок перед значением "Silent"
+    - Нажать "Save"
+  expected-result: |
+    Пользователь должен получить сообщение "Your settings has been changed"
+    Тип звука в уведомлениях должен соответствовать "Silent"
+
+    - summary: |
+    Проверка установки уровня громкости уведомлений
+  requirement: |
+    После выбора звука уведомления "Silent" и нажатии кнопки "Save" должно отобразиться сообщение "Your settings has been changed", и уровень громкости звука в уведомлениях должен соответствовать выбранному  
+  prerequisites:
+    Открыта страница https://codebattle.hexlet.io/#lobby
+  test-data: |
+    Пользователь авторизован
+  steps:
+    - Нажать на имя или иконку пользователя 
+    - Выбрать "Setting"
+    - Для параметра "Select sound level" выбрать новую громкость звука
+    - Нажать "Save"
+  expected-result: |
+    Пользователь должен получить сообщение "Your settings has been changed"
+    Уровень громкости звука в уведомлениях должен соответствовать выбранному 
+    
