@@ -46,3 +46,7 @@
 - summary: |
     Проверка установки уровня громкости уведомлений
   status: pass
+
+- summary: |
+    Сортировка таблицы "Users rating"
+  status: pass
