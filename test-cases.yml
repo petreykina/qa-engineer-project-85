@@ -184,4 +184,17 @@
   expected-result: |
     Пользователь должен получить сообщение "Your settings has been changed"
     Уровень громкости звука в уведомлениях должен соответствовать выбранному 
-    
+
+    - summary: |
+    Сортировка таблицы "Users rating"
+  requirement: |
+    После выбора звука уведомления "Silent" и нажатии кнопки "Save" должно отобразиться сообщение "Your settings has been changed", и уровень громкости звука в уведомлениях должен соответствовать выбранному  
+  prerequisites:
+    Открыта страница https://codebattle.hexlet.io/#lobby
+  test-data: |
+    Пользователь авторизован
+  steps:
+    - Нажать на "TOP list" в разделе Leaderboard
+    - Поочередно нажать  на значки сортировки столбцов "Rank", "Rating", "Games played", "Joined"
+  expected-result: |
+    Значения должны отсортировать в убывающем порядке
